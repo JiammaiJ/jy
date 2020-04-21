@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>RBRVS数据监管检测平台</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../layuiadmin/style/admin.css" media="all">
+  <link rel="stylesheet" href="../layuiadmin/layui/css/home.css" media="all">
+  
+  <script>
+  /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
+  </script>
+</head>
+<body class="layui-layout-body">
+  
+  <div id="LAY_app">
+    <div class="layui-layout layui-layout-admin">
+      <div class="layui-header" style="height:75px;background-color:#32b67a;padding:0 60px 0 33px;display: flex;justify-content: space-between;color:#fff;">
+        <div class="layui-header-left" style="height:100%;display: flex;align-items: center;">
+          <img src="../layuiadmin/style/logo.png"/>
+          <span style="color:#fff;font-weight: bold;font-size: 22px;padding-left: 15px;letter-spacing: 1px;">RBRVS数据监管监测平台</span>
+        </div>
+        <div class="layui-header-right" style="display: flex;align-items: center;">
+          <!-- <span style="font-size: 16px;" class="login_time">登录时间:2019-12-19 9:59:34</span> -->
+          <img  src="../layuiadmin/style/logo_header.jpg" style="width: 46px;height: 46px;border-radius: 30px;margin:0 20px 0 55px"/>
+          <span class="user_name" style="font-size: 18px;"></span>
+          <span class="user_name_icon" style="width:16px;height: 16px;border:1px solid #fff;border-radius: 55%;margin-left:20px;padding:2px;cursor: pointer;">
+            <i class="layui-icon layui-icon-down"></i> 
+            </span>
+            <div class="resert_or_out resert_or_out_hidden">
+              <ul>
+                <li>重置密码</li>
+                <li layadmin-event="logout">退出登录</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      
+      <!-- 侧边菜单 -->
+      <div class="layui-side layui-side-menu" style="margin-top:75px;">
+        <div class="layui-side-scroll" style="background-color: #f6f7f9;">          
+          <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu" style="margin-top: 0px;">
+            <li data-name="home" id="monitor_management" class="layui-nav-item layui-nav-itemed click_checked_this" style="height: 65px;background: url(../../layuiadmin/style/jiankong_checked.png) no-repeat 10px center;">
+              <a href="javascript:;" lay-tips="监控管理" lay-direction="2" style="height: 100%;line-height: 49px;">
+                <!-- <i class="layui-icon layui-icon-home" style="color:#333;top:31%"></i> -->
+                <cite style="color:#8392a7;font-size: 16px;">监控管理</cite>
+              </a>
+            </li>
+            <li data-name="template" id="thirdpart_department" class="layui-nav-item" style="height: 65px;background: url(../../layuiadmin/style/third_normal.png) no-repeat 10px center;">
+              <a href="javascript:;" lay-href="template/search.html" lay-tips="第三方科室对码" lay-direction="2" style="height: 100%;line-height: 49px;">
+                <!-- <i class="layui-icon layui-icon-auz" style="color:#333;top:31%"></i> -->
+                <cite style="color:#8392a7;font-size: 16px;">第三方科室对码</cite>
+              </a>
+            </li>
+            <li data-name="get" id="hospital_department" class="layui-nav-item" style="height: 65px;background: url(../../layuiadmin/style/hospital_normal.png) no-repeat 10px center;">
+              <a href="javascript:;" lay-href="" lay-tips="医院科室对码" lay-direction="2" style="height: 100%;line-height: 49px;">
+                <!-- <i class="layui-icon layui-icon-auz" style="color:#333;top:31%"></i> -->
+                <cite style="color:#8392a7;font-size: 16px;">医院科室对码</cite>
+              </a>
+            </li>
+            <li data-name="get" id="user_list" class="layui-nav-item" style="height: 65px;background: url(../../layuiadmin/style/person_normal.png) no-repeat 10px center;">
+              <a href="javascript:;" lay-href="" lay-tips="人员列表" lay-direction="2" style="height: 100%;line-height: 49px;">
+                <!-- <i class="layui-icon layui-icon-auz" style="color:#333;top:31%"></i> -->
+                <cite style="color:#8392a7;font-size: 16px;">人员列表</cite>
+              </a>
+            </li>
+            <li data-name="get" id="rbrvs_data" class="layui-nav-item" style="height: 65px;background: url(../../layuiadmin/style/data_normal.png) no-repeat 10px center;">
+              <a href="javascript:;" lay-href="" lay-tips="RBRVS数据表" lay-direction="2" style="height: 100%;line-height: 49px;">
+                <!-- <i class="layui-icon layui-icon-auz" style="color:#333;top:31%"></i> -->
+                <cite style="color:#8392a7;font-size: 16px;">RBRVS数据表</cite>
+              </a>
+            </li>
+            <li data-name="get" id="treatment_group" class="layui-nav-item" style="height: 65px;background: url(../../layuiadmin/style/medical_normal.png) no-repeat 10px center;">
+              <a href="javascript:;" lay-href="" lay-tips="医疗组" lay-direction="2" style="height: 100%;line-height: 49px;">
+                <!-- <i class="layui-icon layui-icon-auz" style="color:#333;top:31%"></i> -->
+                <cite style="color:#8392a7;font-size: 16px;">医疗组</cite>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 页面标签 -->
+      <div class="layadmin-pagetabs" id="LAY_app_tabs" style="margin-top:25px;height: 65px;background-color:#eff2f7;display: flex;justify-content: space-between;">
+        <div style="display: flex;align-items: center;justify-content: space-between;" class="show_left_text">监控管理</div>
+        <div style="display: flex;align-items: center;font-size: 16px;" class="show_right_text">监控首页</div>
+      </div>
+      
+      
+      <!-- 主体内容 -->
+      <div class="layui-body" id="LAY_app_body" style="margin-top:60px;">
+        <div class="layadmin-tabsbody-item layui-show">
+          <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+        </div>
+      </div>
+      
+      <!-- 辅助元素，一般用于移动设备下遮罩 -->
+      <div class="layadmin-body-shade" layadmin-event="shade"></div>
+    </div>
+  </div>
+
+  <script src="../layuiadmin/layui/layui.js"></script>
+  <script src="../layuiadmin/lib/ip.js"></script>
+  <script>
+  layui.config({
+    base: '../layuiadmin/' //静态资源所在路径
+  }).extend({
+    index: 'lib/index' //主入口模块
+  }).use('index');
+  </script>
+  
+  <!-- 百度统计 -->
+  <!-- <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?d214947968792b839fd669a4decaaffc";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script> -->
+</body>
+</html>
+
+

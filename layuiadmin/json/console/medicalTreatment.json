@@ -1,0 +1,80 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 1000,
+    "data": [
+        {
+            "num":1,
+            "keshinum":"01010101",
+            "keshiname":"神经外科A",
+            "zhenliaonum":"0101",
+            "zhenliaoname":"住院诊疗组",
+            "yiliaoname":"0001",
+            "yiliaonum":"主任",
+            "doctornum":"01645",
+            "doctorname":"何佳全"
+            
+        },
+        {
+            "num":2,
+            "keshinum":"01010102",
+            "keshiname":"神经外科B",
+            "zhenliaonum":"0101",
+            "zhenliaoname":"住院诊疗组",
+            "yiliaoname":"0001",
+            "yiliaonum":"一组（脑血管组）",
+            "doctornum":"01059",
+            "doctorname":"赵伟"
+            
+        },
+        {
+            "num":3,
+            "keshinum":"01010102",
+            "keshiname":"神经外科B",
+            "zhenliaonum":"0101",
+            "zhenliaoname":"住院诊疗组",
+            "yiliaoname":"0001",
+            "yiliaonum":"一组（脑血管组）",
+            "doctornum":"01059",
+            "doctorname":"赵伟"
+            
+        },
+        {
+            "num":4,
+            "keshinum":"01010102",
+            "keshiname":"神经外科B",
+            "zhenliaonum":"0101",
+            "zhenliaoname":"住院诊疗组",
+            "yiliaoname":"0001",
+            "yiliaonum":"一组（脑血管组）",
+            "doctornum":"01059",
+            "doctorname":"赵伟"
+            
+        },
+        {
+            "num":2,
+            "keshinum":"01010102",
+            "keshiname":"神经外科B",
+            "zhenliaonum":"0101",
+            "zhenliaoname":"住院诊疗组",
+            "yiliaoname":"0001",
+            "yiliaonum":"一组（脑血管组）",
+            "doctornum":"01059",
+            "doctorname":"赵伟"
+            
+        },
+        {
+            "num":5,
+            "keshinum":"01010102",
+            "keshiname":"神经外科B",
+            "zhenliaonum":"0101",
+            "zhenliaoname":"住院诊疗组",
+            "yiliaoname":"0001",
+            "yiliaonum":"一组（脑血管组）",
+            "doctornum":"01059",
+            "doctorname":"赵伟"
+            
+        }
+
+    ]
+} 

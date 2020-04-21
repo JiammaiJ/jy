@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>layuiAdmin 控制台主页一</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+</head>
+<style>
+  html {
+    background-color: #f5f6fa;
+  }
+
+  .layui-form-item .layui-input-inline {
+    width: 150px;
+    margin-right: 0;
+  }
+
+  .layui-inline button {
+    background-color: #32b67a;
+    width: 100px;
+    border-radius: 5px;
+    padding: 0;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .layui-inline button:first-of-type {
+    width: 120px;
+  }
+
+  .layui-select-title {
+    width: 200px;
+    border-radius: 4px;
+    /* border:1px solid #c5c9d5; */
+  }
+
+  .layui-select-title1 .layui-select-title {
+    width: 160px;
+  }
+
+  .layui-form-select .layui-input {
+    border-radius: 4px;
+    height: 40px;
+    background-color: #f5f6fa;
+    border: 1px solid #c5c9d5;
+  }
+
+  .layui-input-block {
+    margin-left: 90px;
+  }
+</style>
+
+<body>
+
+  <div class="layui-fluid">
+    <div style="display: flex;height: 70px;align-items: center;">
+      <div class="layui-form">
+        <div class="layui-form-item" style="margin-bottom:0px">
+          <div class="layui-inline">
+            <label class="layui-form-label" style="padding:10px 0px 10px 0px">人员名称：</label>
+            <div class="layui-input-block">
+              <input type="text" autocomplete="off" class="layui-input search_name" value="">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <label class="layui-form-label" style="padding:10px 0px 10px 0px">科室名称：</label>
+            <div class="layui-input-block">
+              <!-- <select name="city" lay-verify="required">
+              <option value="">名称/简拼</option>
+              <option value="0">北京</option>
+              <option value="1">上海</option>
+              <option value="2">广州</option>
+              <option value="3">深圳</option>
+              <option value="4">杭州</option>
+            </select> -->
+              <input type="text" autocomplete="off" class="layui-input search_dept" value="">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <button type="button" class="layui-btn user_tb">同步人员</button>
+            <button type="button" class="layui-btn search">查询</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <div class="layui-col-md12">
+          <div class="layui-card" style="height: 500px;">
+            <div class="layui-card-body" style="height: 500px;">
+              <table id="demo" lay-filter="test"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <form class="layui-form" id="testForm" style="display:none" lay-filter="testForm">
+      <div class="layui-form-item" style="margin-bottom:0px;margin-top:5%">
+        <div class="layui-inline" style="margin-right:0px">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px;width:60px;color:#999">姓名</label>
+          <div class="layui-input-inline" style="width:80px">
+            <input type="text" class="layui-input edit_userName" style="padding-left:4px;" name="edit_name">
+            <!-- <span class="edit_userName">111</span> -->
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px;color:#999">人员编码：</label>
+          <div class="layui-input-inline" style="width:120px;">
+            <input type="text" class="layui-input edit_usercode" style="padding-left:4px;" readonly='true'
+              name="edit_usercode">
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px;color:#999">科室名称：</label>
+          <div class="layui-input-inline" style="width:120px;">
+            <input type="text" class="layui-input edit_depName" style="padding-left:4px;" readonly='true'
+              name="edit_depName">
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px;width:60px;color:#999">性别：</label>
+          <div class="layui-input-inline" style="width:40px;">
+            <input type="text" class="layui-input edit_sex" style="padding-left:4px;" readonly='true' name="edit_sex">
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item" style="margin-top:2%">
+        <label class="layui-form-label" style="padding:10px 0px 10px 0px;color:#999;width:90px;">查看权限：</label>
+        <div class="layui-input-block user_radio">
+          <input type="radio" name="limit" value="本科" title="本科">
+          <input type="radio" name="limit" value="全院" title="全院" checked>
+        </div>
+      </div>
+      <div class="layui-form-item click_checked">
+        <label class="layui-form-label" style="padding:10px 0px 10px 0px;color:#999;width:90px;">操作页面：</label>
+        <div class="layui-input-block user_checkbox">
+          <input type="checkbox" name="All" lay-skin="primary" title="全部" id="checkedAll" value="all">
+          <input type="checkbox" name="monitor_management" lay-skin="primary" title="监控管理" value="monitor_management">
+          <input type="checkbox" name="thirdpart_department" lay-skin="primary" title="第三方科室对码"
+            value="thirdpart_department">
+          <input type="checkbox" name="hospital_department" lay-skin="primary" title="医院科室对码"
+            value="hospital_department">
+          <input type="checkbox" name="user_list" lay-skin="primary" title="人员列表" value="user_list">
+          <input type="checkbox" name="rbrvs_data" lay-skin="primary" title="RBRVS数据表" value="rbrvs_data">
+          <input type="checkbox" name="treatment_group" lay-skin="primary" title="医疗组" value="treatment_group">
+        </div>
+      </div>
+      <div class="layui-form-item" style="display:flex;justify-content: center;margin-top:4%">
+        <div class="layui-inline">
+          <button type="button" class="layui-btn user_save" style="margin-left:80px;" lay-submit
+            lay-filter="user_save">保存</button>
+        </div>
+      </div>
+    </form>
+
+    <div>
+      <form class="layui-form" hidden action="" lay-filter="example" id="example">
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <input type="password" name="password" placeholder="请输入原始密码" autocomplete="off" class="layui-input oldPass">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <input type="password" name="password" placeholder="请输入新密码" autocomplete="off" class="layui-input newPass1">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <input type="password" name="password" placeholder="请再次确认新密码" autocomplete="off"
+              class="layui-input newPass2">
+          </div>
+        </div>
+        <div class="layui-form-item" style="display:flex;justify-content: center;margin-top:0%">
+          <div class="layui-inline" style="margin-top:1%">
+            <button type="button" class="layui-btn">取消</button>
+            <button type="button" class="layui-btn resetPassword" style="margin-left:80px;">确认</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../../layuiadmin/layui/layui.js?t=1"></script>
+  <script type="text/html" id="barDemo">
+    <a class="" lay-event="edit" style="cursor:pointer;margin-right:10px;color:#32b67a">编辑</a>
+    <a class="" lay-event="reset" style="cursor:pointer;color:#32b67a">重置密码</a>
+  </script>
+  <script src="../../layuiadmin/lib/ip.js"></script>
+  <script>
+    layui.config({
+      base: '../../layuiadmin/' //静态资源所在路径
+    }).extend({
+      index: 'lib/index' //主入口模块
+    }).use(['index', 'personList']);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>layuiAdmin 控制台主页一</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+</head>
+<style>
+  html {
+    background-color: #f5f6fa;
+  }
+
+  .layui-form-item .layui-input-inline {
+    width: 150px;
+    margin-right: 0;
+  }
+
+  .layui-inline button {
+    background-color: #32b67a;
+    width: 100px;
+    border-radius: 5px;
+    padding: 0;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .layui-select-title {
+    width: 200px;
+    border-radius: 4px;
+    /* border:1px solid #c5c9d5; */
+  }
+
+  .layui-select-title1 .layui-select-title {
+    width: 160px;
+  }
+
+  .layui-form-select .layui-input {
+    border-radius: 4px;
+    height: 40px;
+    background-color: #f5f6fa;
+    border: 1px solid #c5c9d5;
+  }
+
+  .layui-input-block {
+    margin-left: 90px;
+  }
+
+  .layui-inline:first-of-type span {
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    text-align: center;
+    border: 1px solid #c5c9d5;
+  }
+
+  .layui-inline:first-of-type span:first-of-type {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: none;
+    background-color: #e1eeec;
+    color: #32b67a;
+  }
+
+  .layui-inline:first-of-type span:last-of-type {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: none;
+  }
+
+  .firstSelect .layui-edge {
+    right: 40px;
+  }
+
+  .show_layui_thisLine {
+    display: inline-block;
+  }
+
+  .hidden_layui_thisLine {
+    display: none;
+  }
+
+  .hidden_layui_thisLine1 {
+    display: none;
+  }
+
+  .show_layui_thisLine1 {
+    display: inline-block;
+  }
+
+  .show_layui_Table {
+    display: block;
+  }
+
+  .show_layui_Table1 {
+    display: block;
+  }
+
+  .hidden_layui_Table {
+    display: none;
+  }
+
+  .hidden_layui_Table1 {
+    display: none;
+  }
+
+  .layui_secodeTable .layui-table-view {
+    width: 605px;
+  }
+</style>
+
+<body>
+
+  <div class="layui-fluid">
+    <div style="display: flex;height: 70px;align-items: center;">
+      <div class="layui-form">
+        <div class="layui-form-item" style="margin-bottom:0px">
+          <div class="layui-inline">
+            <span>对码列表</span><span>对码管理</span>
+          </div>
+          <div class="layui-inline show_layui_thisLine layui_thisLine">
+            <label class="layui-form-label" style="padding:10px 0px 10px 0px">对码时间：</label>
+            <div class="layui-input-inline">
+              <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd"
+                style="height: 40px;border-radius: 4px;background-color: #f5f6fa;border:1px solid #c5c9d5;color:#333"
+                readonly='true'>
+            </div>
+          </div>
+          <div class="layui-inline show_layui_thisLine layui_thisLine">
+            <label class="layui-form-label" style="width:20px;padding:10px 15px 10px 0px">至</label>
+            <div class="layui-input-inline">
+              <input type="text" class="layui-input" id="test1-1" placeholder="yyyy-MM-dd"
+                style="height: 40px;border-radius: 4px;background-color: #f5f6fa;border:1px solid #c5c9d5;color:#333"
+                readonly='true'>
+            </div>
+          </div>
+          <div class="layui-inline show_layui_thisLine layui_thisLine">
+            <div class="layui-input-block" style="display: flex;margin-left: 0;">
+              <span style="height: 40px;line-height: 40px;padding-right: 10px;">小科室名称:</span>
+              <!-- <select name="city" lay-verify="required" id="small_dept" lay-filter="small_deptName">
+                <option value="">全部</option>
+
+              </select> -->
+              <!-- <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">居中弹出</button> -->
+              <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="小科室"
+                  class="layui-input small_open">
+              </div>
+            </div>
+          </div>
+          <div class="layui-inline show_layui_thisLine layui_thisLine">
+            <div class="layui-input-block" style="display: flex;margin-left: 0;">
+              <span style="height: 40px;line-height: 40px;padding-right: 10px;">大科室名称:</span>
+              <!-- <select name="city" lay-verify="required" id="big_dept" lay-filter="big_deptName">
+                <option value="">名称/简写</option>
+
+              </select> -->
+              <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="大科室"
+                  class="layui-input big_open">
+              </div>
+            </div>
+          </div>
+          <div class="layui-inline show_layui_thisLine layui_thisLine">
+            <button type="button" class="layui-btn" id="my_search">查询</button>
+          </div>
+          <div class="layui-inline hidden_layui_thisLine1 layui_thisLine1">
+            <!-- <button type="button" class="layui-btn ooo">保存</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-row layui-col-space15 show_layui_Table layui_Table">
+      <div class="layui-col-md12">
+        <div class="layui-col-md12">
+          <div class="layui-card" style="height: 500px;">
+            <div class="layui-card-body" style="height: 500px;">
+              <table id="test4" lay-filter="test4"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-row layui-col-space15 hidden_layui_Table1 layui_Table1">
+      <div class="layui-col-md12">
+        <div class="layui-col-md12">
+          <div class="layui-card" style="height: 500px;">
+            <div class="layui-card-body layui_secodeTable" style="height: 500px;">
+              <div class="layui-form" style="margin-bottom: 20px;">
+                <div class="layui-form-item" style="margin-bottom:0px">
+                  <label class="layui-form-label" style="padding:10px 0px 10px 0px;width: 100px;">选择大科室：</label>
+                  <!-- <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="test4"
+                      style="height: 40px;border-radius: 4px;background-color: #fff;border:1px solid #c5c9d5;color:#333;width: 300px;">
+                  </div> -->
+                  <!-- <select name="big" lay-verify="required" lay-filter="big" id="big">
+                    <option value="">请选择大科室</option>
+
+                  </select> -->
+                  <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="大科室"
+                      class="layui-input big_open">
+                  </div>
+
+                </div>
+              </div>
+              <table id="test5" lay-filter="test5" style="width: 300px;"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../layuiadmin/layui/layui.js?t=1"></script>
+  <script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="record" style="cursor:pointer;color:white">查看</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete" style="cursor:pointer;color:white">删除</a>
+  </script>
+  <script type="text/html" id="toolbarDemo">
+    <div style="display:flex; justify-content:space-between">
+      <span style="display:flex">
+        <input type="text" placeholder="关键字搜索" class="searchContent">
+        <i class="layui-icon layui-icon-search" style="font-size: 30px; color: #1E9FFF; margin-left:10px" lay-event="search"></i>  
+      </span>
+      <button class="layui-btn layui-btn-sm"  lay-event="getCheckData" style="transform:translateX(120px)">确认选择</button>
+    </div>
+  </script>
+  <script type="text/html" id="toolbarDemo2">
+    <div style="display:flex; justify-content:space-between">
+      <span style="display:flex">
+        <input type="text" placeholder="关键字搜索" class="searchContent2">
+        <i class="layui-icon layui-icon-search" style="font-size: 30px; color: #1E9FFF; margin-left:10px" lay-event="search"></i>  
+      </span>
+      <button class="layui-btn layui-btn-sm" lay-event="getCheckData" style="transform:translateX(120px)">确认选择</button>
+    </div>
+  </script>
+  <script src="../../layuiadmin/lib/ip.js"></script>
+  <script>
+    layui.config({
+      base: '../../layuiadmin/' //静态资源所在路径
+    }).extend({
+      index: 'lib/index' //主入口模块
+    }).use(['index', 'hospitalOfficeCode']);
+  </script>
+</body>
+
+</html>

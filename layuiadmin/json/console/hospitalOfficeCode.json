@@ -1,0 +1,58 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 1000,
+    "data": [
+        {
+            "num":1,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "lastduimaTime":"2019-12-19 15:05:45",
+            "lastduimaPerson":"李兰芳",
+            "action":"查看操作记录"           
+        },
+        {
+            "num":2,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "lastduimaTime":"2019-12-19 15:05:45",
+            "lastduimaPerson":"李兰芳",
+            "action":"查看操作记录"           
+        },
+        {
+            "num":3,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "lastduimaTime":"2019-12-19 15:05:45",
+            "lastduimaPerson":"李兰芳",
+            "action":"查看操作记录"           
+        },
+        {
+            "num":4,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "lastduimaTime":"2019-12-19 15:05:45",
+            "lastduimaPerson":"李兰芳",
+            "action":"查看操作记录"           
+        },
+        {
+            "num":5,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "lastduimaTime":"2019-12-19 15:05:45",
+            "lastduimaPerson":"李兰芳",
+            "action":"查看操作记录"           
+        }
+
+    ]
+} 

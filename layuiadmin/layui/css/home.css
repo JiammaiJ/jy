@@ -1,0 +1,36 @@
+.resert_or_out{
+   background-color: #ffffff;
+   width: 200px;
+   height: 100px; 
+   position:absolute;
+   right:40px;
+   top:75px;
+   box-shadow: 10px 10px 5px #f0f4f3;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+.resert_or_out ul{
+    color:#32b67a;
+    height: 100%;
+    width: 100%;
+}
+.resert_or_out ul li{
+    color:#32b67a;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+}
+.resert_or_out_show{
+    display: block;
+}
+.resert_or_out_hidden{
+    display:none;
+}
+.show_left_text{
+    color:black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+}

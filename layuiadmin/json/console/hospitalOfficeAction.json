@@ -1,0 +1,26 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 1000,
+    "data": [
+        {
+            "num":1,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "actionTime":"2019-12-19 15:05:45",
+            "actioner":"朱时茂"           
+        },
+        {
+            "num":2,
+            "iihname":"眼科",
+            "iihnum":"001",
+            "yongyouname":"眼科",
+            "yongyounum":"124",
+            "actionTime":"2019-12-19 15:05:45",
+            "actioner":"陈佩斯"           
+        }
+
+    ]
+} 

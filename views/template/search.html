@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>layuiAdmin 控制台主页一</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+</head>
+<style>
+html{
+  background-color: #f5f6fa;
+}
+.layui-form-item .layui-input-inline{
+  width: 150px;
+  margin-right: 0;
+}
+.layui-inline button{
+  background-color:#32b67a;
+  width: 100px;
+  border-radius: 5px;
+  padding:0;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.layui-select-title{
+  width:200px;
+  border-radius: 4px;
+  /* border:1px solid #c5c9d5; */
+}
+.layui-select-title1 .layui-select-title{
+  width: 160px;
+}
+.layui-form-select .layui-input{
+  border-radius: 4px;
+  height: 40px;
+  background-color:#f5f6fa;
+  border:1px solid #c5c9d5;
+}
+.layui-input-block{
+ margin-left: 90px;
+}
+.LAY-index-dataview{
+  padding:2%;
+  box-sizing: border-box;
+  border:1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+.LAY-index-dataview p:first-of-type{
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px dashed #f2f2f2;
+  width: 100%;
+  justify-content: space-between;
+}
+.LAY-index-dataview p:last-of-type{
+  flex:1;
+  display: flex;
+}
+.LAY-index-dataview p:last-of-type span{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.LAY-index-dataview p:last-of-type span b{
+  font-weight: normal;
+  text-align: center;
+
+  
+}
+.LAY-index-dataview p:last-of-type span b:first-of-type{
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color:#32b67a;
+}
+.LAY-index-dataview p:last-of-type span b:first-of-type i{
+  font-style: normal;
+  font-size:25px;
+  font-weight: bold;
+}
+ .LAY-index-dataview p:last-of-type span:last-of-type b:first-of-type{
+  color:#fb4d4d;
+}
+.LAY-index-dataview p:last-of-type span b:last-of-type{
+  flex:1;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  color:#333333;
+  
+
+}
+.LAY-index-dataview p:last-of-type span b em{
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  transform: scale(0.9);
+}
+.LAY-index-dataview p:first-of-type span:first-of-type{
+  color:#333333;
+  /* font-size: 18px; */
+  /* font-weight: 600; */
+}
+.LAY-index-dataview p:first-of-type span:last-of-type{
+  color:#999999;
+  font-size: 12px;
+  transform: scale(0.9);
+
+  /* font-weight: 600; */
+}
+</style>
+<body>
+  
+  <div class="layui-fluid">
+    <div style="display: flex;height: 70px;align-items: center;">
+      <div class="layui-form">
+      <div class="layui-form-item" style="margin-bottom:0px">
+        <div class="layui-inline" style="margin-right: 0px;">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px">时间：</label>
+          <div class="layui-input-inline">
+            <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd" style="height: 40px;border-radius: 4px;background-color: #f5f6fa;
+            border:1px solid #c5c9d5" readonly='true'>
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label" style="width:20px;padding:10px 15px 10px 0px">至</label>
+          <div class="layui-input-inline">
+            <input type="text" class="layui-input" id="test1-1" placeholder="yyyy-MM-dd" style="height: 40px;border-radius: 4px;background-color: #f5f6fa;border:1px solid #c5c9d5;color:#333" readonly='true'>
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px">主题列表：</label>
+          <!-- <div class="layui-input-inline">
+            <input type="text" class="layui-input" id="test1-2" placeholder="yyyy-MM-dd" style="height: 40px;border-radius: 4px;background-color: #f5f6fa;border:1px solid #c5c9d5;color:#333" readonly='true'>
+          </div> -->
+          <div class="layui-input-block">
+            <select name="city" lay-verify="required">
+              <option value=""></option>
+              <option value="0">北京</option>
+              <option value="1">上海</option>
+              <option value="2">广州</option>
+              <option value="3">深圳</option>
+              <option value="4">杭州</option>
+            </select>
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label" style="padding:10px 0px 10px 0px">上传状态：</label>
+          <!-- <div class="layui-input-inline"> -->
+            <!-- <input type="text" class="layui-input" id="test1-3" placeholder="yyyy-MM-dd" style="height: 40px;border-radius: 4px;background-color: #f5f6fa;border:1px solid #c5c9d5;color:#333" readonly='true'> -->
+            <div class="layui-input-block layui-select-title1">
+              <select name="city" lay-verify="required">
+                <option value=""></option>
+                <option value="0">北京</option>
+                <option value="1">上海</option>
+                <option value="2">广州</option>
+                <option value="3">深圳</option>
+                <option value="4">杭州</option>
+              </select>
+            <!-- </div> -->
+          </div>
+        </div>
+        <div class="layui-inline">
+          <button type="button" class="layui-btn">查询</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</div>
+
+  <script src="../../layuiadmin/layui/layui.js?t=1"></script>  
+  <script>
+  layui.config({
+    base: '../../layuiadmin/' //静态资源所在路径
+  }).extend({
+    index: 'lib/modules' //主入口模块
+  }).use(['index', 'search']);
+  </script>
+</body>
+</html>
+
